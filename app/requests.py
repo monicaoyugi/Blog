@@ -13,5 +13,5 @@ def get_random_quote():
         quote_data = url.read()
         quote_response = json.loads(quote_data)
         print(quote_data)
-        
+
     return quote_response
