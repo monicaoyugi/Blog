@@ -3,7 +3,6 @@ from werkzeug.security import generate_password_hash, check_password_hash
 from datetime import datetime
 from flask_login import UserMixin
 
-
 class User(UserMixin, db.Model):
     __tablename__ = 'users'
 
@@ -74,4 +73,4 @@ class Comment(db.Model):
     @classmethod
     def get_comments(cls, id):
         comments = Comment.query.filter_by(post_id=id).all()
-        return
+        return comments
