@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div class="container-fluid" id="one"
+    style=" color: white; padding: 50px; background: url('static/image/blog4.jpeg'); height: 400px; background-size: cover; ">
+    <h4 class="animated bounceInUp text-center">BLOGGER,<br>One of the truest tests of integrity is its blunt refusal to
+        be compromised.<br>So,blog to change lives.</h4>
+</div>
+<br>
+<div class="continer">
+    <div class="row">
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            </di<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/707837/pexels-photo-707837.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+            <div class="card-body">
+                <figcaption>
+                    <h5 class="card-title fa-quote-right">-Albert Einstein</h5>
+                </figcaption>
+                <p class="card-text blockquote">Everybody is a genius,But if you judge a fish by its ability to climb a
+                    tree it will leave all it's life believing it is stupid</p>
+                <a href="" class="btn btn-sm btn btn-outline-info">more</a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            </di<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="static/image/nad.jpeg" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{quote.author}}</h5>
+                <small><h6><b>Random quotes</b></h6></small>
+                <p class="card-text">{{quote.quote}}</p>
+                <a href="{{quote.permalink}}" class="btn btn-sm btn-outline-info">more info</a>
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4">
+            </di<div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://images.pexels.com/photos/302549/pexels-photo-302549.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Abraham Lincolin</h5>
+                <p class="card-text">“Let not him who is houseless pull down the house of another, but let him work diligently and build one for himself, thus by example assuring that his own shall be safe from violence when built.”
+
+                        .</p>
+                <a href='http://www.quoteambition.com/famous-abraham-lincoln-quotes/' class="btn btn-outline-info btn-sm">more info</a>
+            </div>
+        </div>
+    </div>
+</div>
+<hr>
+
+{% endblock %}

@@ -1,0 +1,52 @@
+{% macro displayBlog(my_blogs,user) %}
+{% for blog in my_blogs %}
+
+<div class="col-md-1"></div>
+<div class="col-md-10">
+    <div class="card m-3">
+        <div class="card-header">
+            <h4>{{blog.title}}</h4>
+            <span><small> posted {{ moment(blog.timestamp).fromNow(refresh=True)}} </small></span>
+        </div>
+        <div class="card-body">
+            {{blog.body}}
+        </div>
+        <div class="card-footer">
+
+            <div class="row">
+                <div class="col-md-2">
+                    <a class="btn btn-sm btn-outline-info" href="/comments/{{blog.id}}">View Comments</a>
+                </div>
+                <div class="col-md-8"></div>
+                <div class="col-md-2">
+                    <a class="btn btn-sm btn-outline-danger m-1"
+                        href="{{url_for('main.delete_post' , post_id=blog.id)}}">Delete</a>
+                    <a class="btn btn-sm btn-outline-info" href="/comments/new/{{blog.id}}">Comment</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-1"></div>
+{% endfor %}
+{% endmacro %}
+
+{% macro displayComments(comment_list) %}
+{% for comment in comment_list %}
+
+<div class="col-md-6 mb-3">
+    <div class="card">
+        <div class="card-body">
+            <h3>{{comment.comment_post}}</h3>
+        </div>
+        <div class="card-footer">
+            <footer class="blockquote-footer">{{comment.user.username}} commented on your pitch</footer>
+
+        </div>
+    </div>
+</div>
+
+
+
+{% endfor %}
+{% endmacro %}

@@ -4,7 +4,7 @@ base_url = None
 
 def configure_request(app):
     global base_url
-    base_url = app.config['QUOTE_BASE_URL']
+    base_url = app.config['QUOTE_URL']
 
 def get_random_quote():
     """Obtains the quotes from the url"""
