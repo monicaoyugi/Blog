@@ -3,6 +3,8 @@ astroid==2.3.3
 blinker==1.4
 Click==7.0
 dominate==2.4.0
+entrypoints==0.3
+flake8==3.7.9
 Flask==1.1.1
 Flask-Bootstrap==3.3.7.1
 Flask-Login==0.5.0
@@ -10,8 +12,9 @@ Flask-Mail==0.9.1
 Flask-Migrate==2.5.2
 Flask-Script==2.0.6
 Flask-SQLAlchemy==2.4.1
-Flask-Uploads==0.2.1
+git+git://github.com/maxcountryman/flask-uploads@f66d7dc93e684fa0a3a4350a38e41ae00483a796
 Flask-WTF==0.14.3
+gunicorn==20.0.4
 isort==4.3.21
 itsdangerous==1.1.0
 Jinja2==2.11.1
@@ -19,7 +22,10 @@ lazy-object-proxy==1.4.3
 Mako==1.1.1
 MarkupSafe==1.1.1
 mccabe==0.6.1
+pkg-resources==0.0.0
 psycopg2-binary==2.8.4
+pycodestyle==2.5.0
+pyflakes==2.1.1
 pylint==2.4.4
 python-dateutil==2.8.1
 python-editor==1.0.4
