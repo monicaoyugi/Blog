@@ -34,7 +34,8 @@ def new_blog():
         title = form.title.data
 
         new_post = Post(title=title, body=post, user=current_user)
-        new_post.save_post()
+        db.session.add(new_post)
+        db.session.commit()
         return redirect(url_for('.blogs'))
 
     title = 'blogs'
