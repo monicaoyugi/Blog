@@ -6,7 +6,7 @@
     <div class="card m-3">
         <div class="card-header">
             <h4>{{blog.title}}</h4>
-            <span><small> posted {{ moment(blog.timestamp).fromNow(refresh=True)}} </small></span>
+            <span><small> posted {{ mail(blog.timestamp).fromNow(refresh=True)}} </small></span>
         </div>
         <div class="card-body">
             {{blog.body}}
