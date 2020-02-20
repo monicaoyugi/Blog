@@ -4,13 +4,21 @@ from app.models import User, Post, Comment
 from flask_migrate import Migrate, MigrateCommand
 
 # creating app instance
-app = create_app('production')
+app = create_app('development')
 
 manage = Manager(app)
 migrate = Migrate(app, db)
 manage.add_command('db', MigrateCommand)
 manage.add_command('server', Server)
 
+
+
+@manage.command
+def test():
+    '''Run the unit tests.'''
+    import unittest
+    tests = unittest.TestLoader().discover('tests')
+    unittest.TextTestRunner(verbosity=2).run(tests)
 
 @manage.shell
 def make_shell_context():
